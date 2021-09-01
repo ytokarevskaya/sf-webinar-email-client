@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/header/Header'
+import Main from './components/main/Main'
+import Footer from './components/footer/Footer'
+import data from './mock-data.json'
+import {MESSAGE_STATUS} from './const'
 
 function App() {
+  const {users, activeUserId, messages} = data
+  const activeUser = users.find(user => user.id === activeUserId)
+  const unreadMessages = messages.filter(message => message.status === MESSAGE_STATUS.UNREAD)
+  const readMessages = messages.filter(message => message.status === MESSAGE_STATUS.READ)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="layout">
+      <Header user={activeUser} unreadCount={unreadMessages.length} />
+      <Main messages={messages} />
+      <Footer readCount={readMessages.length} unreadCount={unreadMessages.length} />
     </div>
   );
 }

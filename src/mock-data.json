@@ -1,0 +1,52 @@
+{
+	"activeUserId": 1,
+	"users": [
+		{
+			"id": 1,
+			"name": "Юлия Токаревская",
+			"email": "toki@mail.com"
+		}
+	],
+	"messages": [
+		{
+			"id": 123,
+			"sender": "designer@mail.com",
+			"title": "Макеты на согласование",
+			"received": "2021-08-30T15:45:01",
+			"content": "TBD",
+			"status": 0
+		},
+		{
+			"id": 234,
+			"sender": "friend@mail.com",
+			"title": "Билеты на концерт",
+			"received": "2021-08-29T18:39:45",
+			"content": "TBD",
+			"status": 0
+		},
+		{
+			"id": 456,
+			"sender": "shop@mail.com",
+			"title": "Скидки до 50% на ноутбуки",
+			"received": "2021-08-27T10:15:45",
+			"content": "TBD",
+			"status": 0
+		},
+		{
+			"id": 567,
+			"sender": "client@mail.com",
+			"title": "Подписанные документы на оплату",
+			"received": "2021-08-25T12:38:09",
+			"content": "TBD",
+			"status": 0
+		},
+		{
+			"id": 678,
+			"sender": "friens@mail.com",
+			"title": "Фотографии с отдыха",
+			"received": "2021-08-20T17:21:35",
+			"content": "TBD",
+			"status": 1
+		}
+	]
+}

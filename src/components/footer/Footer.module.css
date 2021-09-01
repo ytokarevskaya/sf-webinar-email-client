@@ -1,0 +1,12 @@
+.footer {
+	display: flex;
+	align-items: center;
+	background: #777;
+	color: #fff;
+	padding: 10px 15px;
+	margin-top: auto;
+}
+
+.block {
+	margin-right: 15px;
+}
