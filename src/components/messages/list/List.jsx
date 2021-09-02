@@ -1,25 +1,11 @@
 import css from './List.module.css'
-import classnames from 'classnames'
-import {formatDate} from '../../../utils'
-import {MESSAGE_STATUS} from '../../../const'
+import ListItem from '../list-item/ListItem'
 
 const List = (props) => {
-	const {messages} = props
+	const {messages, setMessagesList} = props
 	return (
 		<section className={css.list}>
-			{messages.map(message => {
-				const isNew = message.status === MESSAGE_STATUS.UNREAD
-				return (
-					<div key={message.id} className={classnames(css.row, { [css.isNew]: isNew })}>
-						<div className={classnames(css.col, css.colNew)}>
-							<span className={css.new}>New</span>
-						</div>
-						<div className={classnames(css.col, css.colEmail)}>{message.sender}</div>
-						<div className={classnames(css.col, css.colTitle)}>{message.title}</div>
-						<div className={classnames(css.col, css.colDate)}>{formatDate(message.received)}</div>
-					</div>
-				)
-			})}
+			{messages.map(message => <ListItem key={message.id} message={message} messages={messages} setMessagesList={setMessagesList} />)}
 		</section>
 	)
 }

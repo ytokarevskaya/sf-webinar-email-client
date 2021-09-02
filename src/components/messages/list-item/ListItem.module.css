@@ -1,0 +1,43 @@
+.row {
+	display: flex;
+	cursor: pointer;
+}
+
+.row:nth-child(odd) {
+	background: #f1f0f0;
+}
+
+.row:hover {
+	background: #cacaca;
+}
+
+.col {
+	padding: 10px 15px;
+}
+
+.colNew span {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 10px;
+	font-weight: bold;
+	background: #F44336;
+	color: #fff;
+	padding: 5px;
+	opacity: 0;
+}
+
+.colDate {
+	margin-left: auto;
+}
+
+.colEmail {
+	flex-basis: 200px;
+}
+
+.isNew .colNew span {
+	opacity: 1;
+}
+
+.isNew .col {
+	font-weight: bold;
+}
